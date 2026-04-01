@@ -1,3 +1,13 @@
+/* 
+define state,
+f(n,0) : #strings of len=n ending with 0
+f(n,1) : #strings of len=n ending with 1
+
+f(n,0) : f(n-1,0) + 0 : f(n-1,0) + f(n-1,1)
+         f(n-1,1) + 0 
+
+f(n,1) : f(n-1,0) + 1 : f(n-1,0)
+*/
 class Solution {
   public:
     int f(int n, int endsWith, vector<vector<int>> &dp){
